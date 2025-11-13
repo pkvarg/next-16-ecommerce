@@ -19,7 +19,7 @@ export default function ResetPasswordPage() {
     setLoading(true)
 
     try {
-      const res = await fetch('http://localhost:3000/auth/reset-password', {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/auth/reset-password`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ token, password }),
@@ -35,7 +35,7 @@ export default function ResetPasswordPage() {
   }
 
   return (
-    <div className="max-w-md mx-auto mt-10 p-6">
+    <div className="max-w-md mx-auto mt-0 pt-24 p-6">
       <h1 className="text-2xl font-bold mb-4">Reset Password</h1>
       <form onSubmit={handleSubmit}>
         <input

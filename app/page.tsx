@@ -1,3 +1,5 @@
+import ContactForm from '@/components/ContactForm'
+
 export default function Home() {
   return (
     <div className="relative min-h-screen overflow-hidden bg-linear-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -10,8 +12,16 @@ export default function Home() {
 
       {/* Main content */}
       <div className="relative px-4 pt-24 pb-12">
-        <div className="max-w-6xl mx-auto text-center">
+        <div className="max-w-6xl mx-auto text-center mb-16">
           <h1 className="text-6xl font-bold text-white mb-4">Welcome</h1>
+          <p className="text-xl text-purple-200 mb-8">
+            Your journey to amazing experiences starts here
+          </p>
+        </div>
+
+        {/* Contact Form Section */}
+        <div className="max-w-6xl mx-auto">
+          <ContactForm />
         </div>
       </div>
     </div>

@@ -14,7 +14,7 @@ export default function ForgotPasswordPage() {
     setMessage('')
 
     try {
-      const res = await fetch('http://localhost:3000/auth/forgot-password', {
+      const res = await fetch('http://localhost:3016/auth/forgot-password', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email }),
@@ -124,7 +124,10 @@ export default function ForgotPasswordPage() {
             {/* Back to Login Link */}
             <p className="mt-6 text-center text-sm text-purple-200">
               Remember your password?{' '}
-              <a href="/login" className="font-medium text-white hover:text-purple-300 transition-colors">
+              <a
+                href="/login"
+                className="font-medium text-white hover:text-purple-300 transition-colors"
+              >
                 Sign in
               </a>
             </p>
